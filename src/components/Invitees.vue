@@ -1,6 +1,5 @@
 <template>
-  <div class="Invitees">
-    <p class="text-xl">List all invitees here.</p>
+  <div class="Invitees flex items-center justify-center">
     <div v-if="inviteesData">
       <table class="table-auto">
         <thead>
