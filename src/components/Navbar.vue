@@ -8,6 +8,9 @@
       <router-link :to="{ name: 'Invitees'}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         Invitees
       </router-link>
+      <router-link :to="{ name: 'CreateInvitee'}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Create New Invitee
+      </router-link>
     </div>
   </div>
 </nav>

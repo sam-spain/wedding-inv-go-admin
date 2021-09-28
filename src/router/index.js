@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Invitees from "../components/Invitees.vue";
+import CreateInvitee from "../components/CreateInvitee.vue"
 import Home from "../components/Home.vue";
 import '../assets/css/tailwind.css'
 
@@ -18,6 +19,11 @@ export default new Router({
       path: "/invitees",
       name: "Invitees",
       component: Invitees,
+    },
+    {
+      path: "/create-invitee",
+      name: "CreateInvitee",
+      component: CreateInvitee,
     },
   ],
 });

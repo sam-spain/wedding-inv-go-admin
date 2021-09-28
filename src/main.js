@@ -7,6 +7,7 @@ import './assets/css/tailwind.css'
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios);
+Vue.use(router);
 
 const baseURL = 'http://localhost:8081';
 if (typeof baseURL !== 'undefined') {
