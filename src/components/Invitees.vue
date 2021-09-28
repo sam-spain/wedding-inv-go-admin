@@ -11,6 +11,8 @@
             <th class="px-4 py-2 text-blue-600">Attending Ceremony</th>
             <th class="px-4 py-2 text-blue-600">Invited To Reception</th>
             <th class="px-4 py-2 text-blue-600">Attending Reception</th>
+            <th class="px-4 py-2 text-blue-600"></th>
+            
           </tr>
         </thead>
         <tbody v-for="invitee in inviteesData" :key="invitee._id">
@@ -22,6 +24,9 @@
             <td class="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{{ invitee.attendingCeremony }}</td>
             <td class="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{{ invitee.invitedToReception }}</td>
             <td class="border border-blue-500 px-4 py-2 text-blue-600 font-medium">{{ invitee.attendingReception }}</td>
+            <td class="border border-blue-500 px-4 py-2 text-blue-600 font-medium">
+              <router-link :to="{ name: 'InviteeDetails', params: { userId: invitee._id }}">Edit</router-link>
+            </td>
           </tr>
         </tbody>
       </table>
