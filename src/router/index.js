@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Invitees from "../components/Invitees.vue";
 import Home from "../components/Home.vue";
+import '../assets/css/tailwind.css'
 
 Vue.use(Router);
 
