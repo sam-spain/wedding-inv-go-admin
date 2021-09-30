@@ -1,4 +1,4 @@
-# wedding-inv-go-web-client
+# wedding-inv-go-web-clients
 
 ## Project setup
 ```
