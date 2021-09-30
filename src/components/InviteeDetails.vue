@@ -26,7 +26,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="preferredNameInput"
-        >Full Name</label
+        >Known As</label
       >
       <input
         id="preferredNameInput"
@@ -37,7 +37,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="inviteeStatusInput"
-        >Full Name</label
+        >Invitee Status</label
       >
       <select
         id="inviteeStatusInput"
@@ -53,7 +53,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="contactNumberInput"
-        >Full Name</label
+        >Contact Number</label
       >
       <input
         id="contactNumberInput"
@@ -64,7 +64,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="contactEmailInput"
-        >Full Name</label
+        >Contact Email</label
       >
       <input
         id="contactEmailInput"
@@ -75,7 +75,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="preferredContactInput"
-        >Full Name</label
+        >Preferred Contact Method</label
       >
       <select
         id="preferredContactInput"
@@ -126,7 +126,7 @@
         <label
           class="block mr-3 text-gray-700 text-sm font-bold"
           for="attendingReceptionInput"
-          >Attending Ceremony?</label
+          >Attending Reception?</label
         >
         <input
           type="checkbox"
@@ -137,7 +137,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="dietaryNotesInput"
-        >Attending Ceremony?</label
+        >Dietary Notes</label
       >
       <textarea
         class="block bg-gray-100 text-gray-700 text-sm font-bold"
@@ -149,7 +149,7 @@
       <label
         class="block text-gray-700 text-sm font-bold"
         for="additionalNotesInput"
-        >Attending Ceremony?</label
+        >Additional Notes</label
       >
       <textarea
         class="block bg-gray-100 text-gray-700 text-sm font-bold"
