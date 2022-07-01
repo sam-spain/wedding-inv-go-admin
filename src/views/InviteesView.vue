@@ -2,9 +2,30 @@
   <div class="Invitees">
     <p>List all invitees here.</p>
     <div v-if="inviteesData">
-      <li v-for="invitee in inviteesData.data" :key="invitee._id">
-        {{ invitee.enteredName }}
-      </li>
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Known As</th>
+            <th>Status</th>
+            <th>Invited To Ceremony</th>
+            <th>Attending Ceremony</th>
+            <th>Invited To Reception</th>
+            <th>Attending Reception</th>
+          </tr>
+        </thead>
+        <tbody v-for="invitee in inviteesData.data" :key="invitee._id">
+          <tr>
+            <td>{{ invitee.enteredName }}</td>
+            <td>{{ invitee.preferredName }}</td>
+            <td>{{ invitee.inviteeStatus }}</td>
+            <td>{{ invitee.invitedToCeremony }}</td>
+            <td>{{ invitee.attendingCeremony }}</td>
+            <td>{{ invitee.invitedToReception }}</td>
+            <td>{{ invitee.attendingReception }}</td>
+          </tr>
+        </tbody>
+      </table>
       <button @click="backButton">Back Page</button>
       <button @click="forwardButton">Forward Page</button>
     </div>
