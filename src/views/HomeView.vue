@@ -20,19 +20,26 @@ export default {
   },
   methods: {
     async login() {
-      const response = await this.$http.post("/api/v1/auth/login", {
-        email: "jane@samspain.com",
-        password: "passwords",
-      });
+      const response = await this.$http.post(
+        "/api/v1/auth/login",
+        {
+          email: "jane@samspain.com",
+          password: "passwords",
+        },
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
       this.userToken = response.data;
       this.cookie = this.$cookies.get("token");
     },
     async getMe() {
       const response = await this.$http.get("/api/v1/auth/me", {
-        headers: {
-          Authorization: "Bearer " + this.userToken,
-          "Content-Type": "text/plain",
-        },
+        withCredentials: true,
       });
       this.user = response.data.data;
     },

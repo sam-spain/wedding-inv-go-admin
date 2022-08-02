@@ -4,6 +4,7 @@ import Router from "./router/router";
 import Axios from "axios";
 import VueAxios from "vue-axios";
 import VueCookies from "vue-cookies";
+Axios.defaults.withCredentials = true;
 
 createApp(App).use(VueAxios, Axios).use(Router).use(VueCookies).mount("#app");
 
