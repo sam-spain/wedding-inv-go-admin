@@ -12,6 +12,7 @@
             <th>Attending Ceremony</th>
             <th>Invited To Reception</th>
             <th>Attending Reception</th>
+            <th></th>
           </tr>
         </thead>
         <tbody v-for="invitee in inviteesData.data" :key="invitee._id">
@@ -23,6 +24,15 @@
             <td>{{ invitee.attendingCeremony }}</td>
             <td>{{ invitee.invitedToReception }}</td>
             <td>{{ invitee.attendingReception }}</td>
+            <td>
+              <router-link
+                :to="{
+                  name: 'InviteeDetails',
+                  params: { userId: invitee._id },
+                }"
+                >Edit</router-link
+              >
+            </td>
           </tr>
         </tbody>
       </table>

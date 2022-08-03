@@ -6,6 +6,10 @@
       v-bind:value="this.$route.params.userId"
       readonly
     />
+    <br />
+    <label for="enteredNameInput">Full Name</label>
+    <input id="enteredNameInput" v-model="model.enteredName" />
+    <br />
   </form>
 </template>
 
@@ -28,18 +32,20 @@ export default {
       additionalNotes: "",
     },
   }),
-  mounted() {},
+  mounted() {
+    this.getInvitee();
+  },
   methods: {
     async updateInvitee() {
       this.model = await this.$http.put(
-        `/api/invitee/${this.$route.params.userId}`,
+        `/api/v1/invitee/${this.$route.params.userId}`,
         this.model
       );
       this.$router.push({ path: "/invitees" });
     },
     async deleteInvitee() {
       await this.$http.delete(
-        `/api/invitee/${this.$route.params.userId}`,
+        `/api/v1/invitee/${this.$route.params.userId}`,
         this.model
       );
       this.$router.push({ path: "/invitees" });
@@ -49,7 +55,7 @@ export default {
     },
     async getInvitee() {
       const response = await this.$http.get(
-        "/api/invitee/${this.$route.params.userId}"
+        `/api/v1/invitee/${this.$route.params.userId}`
       );
       this.model = response.data;
     },
