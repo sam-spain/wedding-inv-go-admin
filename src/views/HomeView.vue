@@ -23,13 +23,11 @@ export default {
       const response = await this.$http.post(
         "/api/v1/auth/login",
         {
-          email: "jane@samspain.com",
+          email: "sunny@samspain.com",
           password: "passwords",
         },
         {
-          withCredentials: true,
           headers: {
-            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
           },
         }
