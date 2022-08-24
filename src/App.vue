@@ -2,12 +2,16 @@
   <router-link to="/">Go to Home</router-link>
   <router-link to="/about">Go to About</router-link>
   <router-link to="/invitees">Go to Invitees</router-link>
+  <LoginControls />
   <router-view></router-view>
+  
 </template>
 
 <script>
+import LoginControls from './components/LoginControls.vue';
 export default {
-  name: "App",
+    name: "App",
+    components: { LoginControls }
 };
 </script>
 
