@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import InviteesView from "../views/InviteesView.vue";
 import InviteeDetails from "../views/InviteeDetails.vue";
+import CreateInvitee from "../views/CreateInvitee.vue";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: "InviteeDetails",
     component: InviteeDetails,
   },
+  {
+    path: "/create-invitee",
+    name: "CreateInvitee",
+    component: CreateInvitee,
+  }
 ];
 
 const router = createRouter({

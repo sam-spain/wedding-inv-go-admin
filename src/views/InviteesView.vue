@@ -1,6 +1,9 @@
 <template>
   <div class="Invitees">
     <p>List all invitees here.</p>
+    <router-link :to="{name: 'CreateInvitee'}">
+    Create New Invitee
+    </router-link>
     <div v-if="inviteesData">
       <table>
         <thead>
@@ -25,13 +28,10 @@
             <td>{{ invitee.invitedToReception }}</td>
             <td>{{ invitee.attendingReception }}</td>
             <td>
-              <router-link
-                :to="{
-                  name: 'InviteeDetails',
-                  params: { userId: invitee._id },
-                }"
-                >Edit</router-link
-              >
+              <router-link :to="{
+                name: 'InviteeDetails',
+                params: { userId: invitee._id },
+              }">Edit</router-link>
             </td>
           </tr>
         </tbody>
