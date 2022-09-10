@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Deployed using https://learnvue.co/tutorials/deploy-vue-to-github-pages
