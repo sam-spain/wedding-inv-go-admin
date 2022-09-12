@@ -5,7 +5,7 @@ import Axios from "axios";
 import VueAxios from "vue-axios";
 import VueCookies from "vue-cookies";
 Axios.defaults.withCredentials = true;
-const baseURL = "https://samspain.com:443";
+const baseURL = "https://samspain.com";
 if (typeof baseURL !== "undefined") {
   Axios.defaults.baseURL = baseURL;
 }
