@@ -58,6 +58,10 @@
       <textarea rows="10" cols="40" id="additionalNotesInput" v-model="model.additionalNotes" />
     </div>
     <div>
+      <label for="adminNotesInput">Admin Notes</label>
+      <input id="adminNotesInput" v-model="model.adminNotes" />
+    </div>
+    <div>
       <button v-on:click="createInvitee" type="button">Create
       </button>
       <button v-on:click="cancel" type="button">Cancel</button>

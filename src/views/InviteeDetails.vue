@@ -5,6 +5,10 @@
       <input id="inviteeIdField" v-bind:value="this.$route.params.userId" readonly />
     </div>
     <div>
+      <label for="inviteeCodeField"> Access Token</label>
+      <input id="inviteeCodeField" v-model="model.inviteeAccessToken" readonly />
+    </div>
+    <div>
       <label for="enteredNameInput">Full Name</label>
       <input id="enteredNameInput" v-model="model.enteredName" />
     </div>
@@ -62,6 +66,10 @@
       <textarea rows="10" cols="40" id="additionalNotesInput" v-model="model.additionalNotes" />
     </div>
     <div>
+      <label for="adminNotesInput">Admin Notes</label>
+      <input id="adminNotesInput" v-model="model.adminNotes" />
+    </div>
+    <div>
       <button v-on:click="updateInvitee" type="button">Update
       </button>
       <button v-on:click="cancel" type="button">Cancel</button>
@@ -87,6 +95,8 @@ export default {
       attendingReceptiion: "",
       dietaryNotes: "",
       additionalNotes: "",
+      adminNotes: "",
+      inviteeAccessToken: ""
     },
   }),
   mounted() {
