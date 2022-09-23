@@ -7,7 +7,7 @@ import VueCookies from "vue-cookies";
 Axios.defaults.withCredentials = true;
 let baseURL;
 if(process.env.NODE_ENV === "production") {
-  baseURL = "https://samspain.com";
+  baseURL = "https://api.samgowedding.com";
 } else {
   baseURL = "http://localhost:8081";
 }
