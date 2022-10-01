@@ -7,6 +7,7 @@
     <div>
       <label for="inviteeCodeField"> Access Token</label>
       <input id="inviteeCodeField" v-model="model.inviteeAccessToken" readonly />
+      <button v-on:click="setInviteLink" type="button">Copy</button>
     </div>
     <div>
       <label for="enteredNameInput">Full Name</label>
@@ -160,7 +161,10 @@ export default {
     },
     removeAdditionalGuest(index) {
       this.model.additionalGuests.splice(index, 1);
-    }
+    },
+    async setInviteLink() {
+      await navigator.clipboard.writeText(`https://gospainwedding.com/invitation/${this.model.inviteeAccessToken}`);
+    } 
   },
 };
 </script>
