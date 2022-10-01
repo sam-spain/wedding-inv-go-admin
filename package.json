@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "cd dist && cp index.html 404.html",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "gh-pages-deploy": "node ./scripts/gh-pages-deploy.js"
   },
   "dependencies": {
     "axios": "^0.27.2",
