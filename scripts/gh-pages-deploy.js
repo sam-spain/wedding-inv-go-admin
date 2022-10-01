@@ -7,7 +7,7 @@ const execa = require("execa");
       await execa("git", ["checkout", "--orphan", "gh-pages"]);
       console.log("Building...");
       await execa("npm", ["run", "build"]);
-      fs.writeFile('CNAME', 'admin.gospainwedding.com');
+      fs.writeFile('CNAME', 'admin.gospainwedding.com', () => {});
       console.log("Finished build");
       // Understand if it's dist or build folder
       const folderName = fs.existsSync("dist") ? "dist" : "build";
