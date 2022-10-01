@@ -74,6 +74,10 @@
       <input type="number" id="additionalGuestsAvailableInput" v-model="model.additionalGuestAvailable" />
     </div>
     <div>Total guests saved: {{model.additionalGuests.length}}</div>
+    <div>
+      <button v-on:click="createAdditionalGuest" type="button" >Add Additional
+        Guest</button>
+    </div>
     <span v-for="(guest, index) in model.additionalGuests" v-bind:key="guest.preferredName">
       <div>
         <p>Guest {{ index + 1 }}</p>
@@ -86,7 +90,7 @@
           <input v-model="guest.dietaryNotes" />
         </div>
         <div>
-          <label>Additional Name</label>
+          <label>Additional Notes</label>
           <input v-model="guest.additionalNotes" />
         </div>
         <button v-on:click="removeAdditionalGuest(index)" type="button">Delete</button>
@@ -151,6 +155,12 @@ export default {
       );
       this.model = response.data;
     },
+    createAdditionalGuest() {
+      this.model.additionalGuests.push({});
+    },
+    removeAdditionalGuest(index) {
+      this.model.additionalGuests.splice(index, 1);
+    }
   },
 };
 </script>
