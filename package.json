@@ -5,7 +5,7 @@
   "homepage": "/wedding-inv-go-admin/",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build %% npm run deploy",
     "lint": "vue-cli-service lint",
     "deploy": "cd dist && cp index.html 404.html",
     "gh-pages-deploy": "node ./scripts/gh-pages-deploy.js"
