@@ -70,6 +70,29 @@
       <input id="adminNotesInput" v-model="model.adminNotes" />
     </div>
     <div>
+      <label for="additionalGuestsAvailableInput">Additional Guests Available</label>
+      <input type="number" id="additionalGuestsAvailableInput" v-model="model.additionalGuestAvailable" />
+    </div>
+    <div>Total guests saved: {{model.additionalGuests.length}}</div>
+    <span v-for="(guest, index) in model.additionalGuests" v-bind:key="guest.preferredName">
+      <div>
+        <p>Guest {{ index + 1 }}</p>
+        <div>
+          <label>Preferred Name</label>
+          <input v-model="guest.preferredName" />
+        </div>
+        <div>
+          <label>Dietary Notes</label>
+          <input v-model="guest.dietaryNotes" />
+        </div>
+        <div>
+          <label>Additional Name</label>
+          <input v-model="guest.additionalNotes" />
+        </div>
+        <button v-on:click="removeAdditionalGuest(index)" type="button">Delete</button>
+      </div>
+    </span>
+    <div>
       <button v-on:click="updateInvitee" type="button">Update
       </button>
       <button v-on:click="cancel" type="button">Cancel</button>
@@ -96,7 +119,9 @@ export default {
       dietaryNotes: "",
       additionalNotes: "",
       adminNotes: "",
-      inviteeAccessToken: ""
+      inviteeAccessToken: "",
+      additionalGuests: [],
+      additionalGuestAvailable: 0
     },
   }),
   mounted() {
