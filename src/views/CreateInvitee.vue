@@ -5,10 +5,6 @@
       <input id="enteredNameInput" v-model="model.enteredName" />
     </div>
     <div>
-      <label for="preferredNameInput">Preferred Name</label>
-      <input id="preferredNameInput" v-model="model.preferredName" />
-    </div>
-    <div>
       <label for="inviteeStatusInput">Invitation Status</label>
       <select id="inviteeStatusInput" v-model="model.inviteeStatus">
         <option value="Not Sent" selected>Not Sent</option>
@@ -62,6 +58,10 @@
       <input id="adminNotesInput" v-model="model.adminNotes" />
     </div>
     <div>
+      <label for="additionalGuestAvailableInput">Additional guests available</label>
+      <input type="number" id="additionalGuestAvailableInput" v-model="model.additionalGuestAvailable" />
+    </div>
+    <div>
       <button v-on:click="createInvitee" type="button">Create
       </button>
       <button v-on:click="cancel" type="button">Cancel</button>
@@ -80,6 +80,7 @@ export default {
       attendingCeremony: false,
       invitedToReception: false,
       attendingReceptiion: false,
+      additionalGuestAvailable: 0
     },
   }),
   methods: {

@@ -15,7 +15,7 @@
     </div>
     <div>
       <label for="preferredNameInput">Preferred Name</label>
-      <input id="preferredNameInput" v-model="model.preferredName" />
+      <input id="preferredNameInput" v-model="model.preferredName" readonly />
     </div>
     <div>
       <label for="inviteeStatusInput">Invitation Status</label>
