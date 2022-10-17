@@ -52,7 +52,7 @@
     </div>
     <div>
       <label for="invitedToReceptionInput">Invited To Reception</label>
-      <input type="checkbox" id="invitedToReceptionInput" v-model="model.invitedToRecepion" />
+      <input type="checkbox" id="invitedToReceptionInput" v-model="model.invitedToReception" />
     </div>
     <div>
       <label for="attendingReceptionInput">Attending Reception</label>
