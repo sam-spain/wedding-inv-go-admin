@@ -39,7 +39,7 @@
     </div>
     <div>
       <label for="invitedToReceptionInput">Invited To Reception</label>
-      <input type="checkbox" id="invitedToReceptionInput" v-model="model.invitedToRecepion" />
+      <input type="checkbox" id="invitedToReceptionInput" v-model="model.invitedToReception" />
     </div>
     <div>
       <label for="attendingReceptionInput">Attending Reception</label>
@@ -79,7 +79,7 @@ export default {
       invitedToCeremony: false,
       attendingCeremony: false,
       invitedToReception: false,
-      attendingReceptiion: false,
+      attendingReception: false,
       additionalGuestAvailable: 0
     },
   }),

@@ -120,7 +120,7 @@ export default {
       invitedToCeremony: false,
       attendingCeremony: false,
       invitedToReception: false,
-      attendingReceptiion: "",
+      attendingReception: false,
       dietaryNotes: "",
       additionalNotes: "",
       adminNotes: "",
