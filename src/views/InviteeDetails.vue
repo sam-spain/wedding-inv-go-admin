@@ -59,6 +59,10 @@
       <input type="checkbox" id="attendingReceptionInput" v-model="model.attendingReception" />
     </div>
     <div>
+      <label for="declinedInviteInput">Declined Invite</label>
+      <input type="checkbox" id="declinedInviteInput" v-model="model.declinedInvite" disabled />
+    </div>
+    <div>
       <label for="dietaryNotesInput">Dietary Notes</label>
       <textarea rows="10" cols="40" id="dietaryNotesInput" v-model="model.dietaryNotes" />
     </div>
@@ -121,6 +125,7 @@ export default {
       attendingCeremony: false,
       invitedToReception: false,
       attendingReception: false,
+      declinedInvite: false,
       dietaryNotes: "",
       additionalNotes: "",
       adminNotes: "",

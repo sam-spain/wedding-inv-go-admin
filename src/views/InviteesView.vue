@@ -11,6 +11,7 @@
             <th>Full Name</th>
             <th>Known As</th>
             <th>Status</th>
+            <th>Declined Invite</th>
             <th>Invited To Ceremony</th>
             <th>Attending Ceremony</th>
             <th>Invited To Reception</th>
@@ -23,6 +24,7 @@
             <td>{{ invitee.enteredName }}</td>
             <td>{{ invitee.preferredName }}</td>
             <td>{{ invitee.inviteeStatus }}</td>
+            <td>{{ invitee.declinedInvite }}</td>
             <td>{{ invitee.invitedToCeremony }}</td>
             <td>{{ invitee.attendingCeremony }}</td>
             <td>{{ invitee.invitedToReception }}</td>
